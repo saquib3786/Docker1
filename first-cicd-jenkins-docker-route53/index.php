@@ -42,18 +42,15 @@
         <div class="skills bg-1F1A36 text-left p-4 rounded-md">
             <h6 class="text-sm mb-2 uppercase">Skills</h6>
             <ul class="flex flex-wrap list-none m-0 p-0">
-				<li class="bg-2D2747 text-xs rounded-md m-1 p-2">Kubernetes</li>
-                <li class="bg-2D2747 text-xs rounded-md m-1 p-2">GCP/AWS/AZURE</li>
-                <li class="bg-2D2747 text-xs rounded-md m-1 p-2">Docker</li>
-                <li class="bg-2D2747 text-xs rounded-md m-1 p-2">Ansible</li>
-                <li class="bg-2D2747 text-xs rounded-md m-1 p-2">Jenkins</li>
-                <li class="bg-2D2747 text-xs rounded-md m-1 p-2">Git</li>
-                <li class="bg-2D2747 text-xs rounded-md m-1 p-2">GitHub</li>
-                <li class="bg-2D2747 text-xs rounded-md m-1 p-2">Linux RHCE</li>
-                <li class="bg-2D2747 text-xs rounded-md m-1 p-2">Terraform</li>
+                <?php
+                $skills = ['Kubernetes', 'GCP/AWS/AZURE', 'Docker', 'Ansible', 'Jenkins', 'Git', 'GitHub', 'Linux RHCE', 'Terraform'];
+                foreach ($skills as $skill) {
+                    echo '<li class="bg-2D2747 text-xs rounded-md m-1 p-2">' . $skill . '</li>';
+                }
+                ?>
             </ul>
         </div>
-		<div class="bg-gradient-to-r from-blue-500 via-green-500 to-purple-500 w-full h-5 absolute bottom-0 right-0 animate-wave duration-3000 ease-in-out infinite"></div>
+        <div class="bg-gradient-to-r from-blue-500 via-green-500 to-purple-500 w-full h-5 absolute bottom-0 right-0 animate-wave duration-3000 ease-in-out infinite"></div>
     </div>
 </body>
 </html>
