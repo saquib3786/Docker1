@@ -18,7 +18,7 @@ environment {
             
             steps {
                 sh 'ls -la'
-                sh 'docker build -t makmat/php:v${BUILD_NUMBER} -f Docker1/first-cicd-jenkins-docker-route53/Dockerfile .'
+                sh 'docker build -t saquibmohammed3786/php:v${BUILD_NUMBER} -f Docker1/first-cicd-jenkins-docker-route53/Dockerfile .'
             }
         }
 
@@ -27,7 +27,7 @@ environment {
             steps {
  				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 
-                sh 'docker push makmat/php:v${BUILD_NUMBER}'
+                sh 'docker push saquibmohammed3786/php:v${BUILD_NUMBER}'
             }
         }
         stage('Run Docker container') {
@@ -47,7 +47,7 @@ else
     done
 fi
 		'''
-                sh 'docker run -d -p 80:80 makmat/php:v${BUILD_NUMBER}'
+                sh 'docker run -d -p 80:80 saquibmohammed3786/php:v${BUILD_NUMBER}'
             }
         }
 
